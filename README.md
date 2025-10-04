@@ -4,11 +4,24 @@
 
 这是基于官方 MicroSIP 3.21.6 的修改版本，添加了**外呼限制功能**。
 
+## 📦 下载源码
+
+### 完整源码包 ⭐ (推荐)
+**文件**: `MicroSIP-Complete-3.21.6-src.tar.gz` (993KB, 560个文件)
+- **下载链接**: https://raw.githubusercontent.com/sloperjia/sloper/main/source/MicroSIP-Complete-3.21.6-src.tar.gz
+- **包含**: 完整的Visual Studio项目文件、PJSIP库、资源文件和所有依赖项
+- **用途**: 可直接使用Visual Studio 2022进行完整编译
+
+### 基础源码包
+**文件**: `MicroSIP-3.21.6-src-modified.tar.gz` (432KB, 191个文件)
+- **下载链接**: https://raw.githubusercontent.com/sloperjia/sloper/main/source/MicroSIP-3.21.6-src-modified.tar.gz
+- **包含**: 核心源码文件，部分依赖需要额外配置
+
 ## 主要修改
 
 ### ✨ 新增功能
 - **外呼限制控制**: 可通过配置文件禁止发起外呼电话
-- **默认禁止外呼**: 默认配置下禁止外呼，提高安全性
+- **默认禁用外呼**: 默认配置下禁止外呼，提高安全性
 - **来电功能保持**: 不影响接听来电和通话控制功能
 - **配置持久化**: 设置自动保存到INI配置文件
 
@@ -22,7 +35,7 @@ disableOutgoing=1   ; 1 = 禁用外呼 (默认), 0 = 允许外呼
 ```
 
 **配置文件位置**:
-- 安装模式: `%APPDATA%\\MicroSIP\\MicroSIP.ini`
+- 安装模式: `%APPDATA%\MicroSIP\MicroSIP.ini`
 - 便携模式: 程序目录下的 `MicroSIP.ini`
 
 ### 🔧 技术实现
@@ -48,11 +61,12 @@ disableOutgoing=1   ; 1 = 禁用外呼 (默认), 0 = 允许外呼
 
 ## 编译步骤
 
-1. 安装 Visual Studio 2022 Community
-2. 安装 "使用 C++ 的桌面开发" 工作负载
-3. 配置 PJSIP 库依赖
-4. 打开 `microsip.vcxproj` 项目文件
-5. 编译 Release x64 配置
+1. 下载完整源码包 `MicroSIP-Complete-3.21.6-src.tar.gz`
+2. 解压缩到本地目录
+3. 安装 Visual Studio 2022 Community
+4. 安装 "使用 C++ 的桌面开发" 工作负载
+5. 打开 `microsip.vcxproj` 项目文件
+6. 编译 Release x64 配置
 
 ## 功能特性
 
